@@ -8,9 +8,11 @@ export const Wrapper = styled.menu`
   padding-left: 1.2rem;
   position: relative;
   background-color: white;
-  height: 6rem;
+  height: 10rem;
+  border-bottom: 0.3rem solid lightgray;
   ${media.lessThan('medium')`
      padding-right: 1.2rem;
+     height: 6rem;
  `}
 `
 export const LogoWrapper = styled.div`
@@ -33,27 +35,32 @@ export const MenuGroup = styled.div`
   flex-grow: 1;
   justify-content: flex-end;
   align-items: center;
+  //padding: 3rem;
   > div {
-    margin-left: 1.2rem;
+    margin: 0 2.2rem;
   }
+  ${media.greaterThan('medium')`
+    margin: 2rem;
+    > button { 
+    padding: 1rem 2rem;
+  }
+  `}
 `
 
 export const MenuNav = styled.div`
   ${media.greaterThan('medium')`
-  margin-left: 0.8rem;
+  margin-left: 2rem;
   `}
-`
-export const PhotoTest = styled.div`
-  background-color: red;
 `
 
 export const MenuLink = styled.a`
   position: relative;
-  color: white;
+  color: gray;
   font-size: 1.4rem;
-  margin: 0.3rem 0.8rem 0;
+  margin: 0.3rem 2.8rem 0;
   text-decoration: none;
   text-align: center;
+  font-weight: bold;
 `
 type MenuToggleProps = {
   isOpen: boolean
@@ -96,26 +103,6 @@ export const MenuToggle = styled.nav<MenuToggleProps>`
       margin-bottom: 1rem;
     }
   `}
-`
-
-export const RegisterBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 2rem 2rem;
-
-  > span {
-    display: block;
-    margin: 1.2rem 0;
-    font-size: 1.2rem;
-  }
-`
-
-export const CreateAccount = styled.div`
-  text-decoration: none;
-  cursor: pointer;
-  color: hsl(26, 100%, 55%);
-  border-bottom: 0.2rem solid hsl(26, 100%, 55%);
 `
 
 export const Sombra = styled.div`

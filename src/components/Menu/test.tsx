@@ -28,10 +28,10 @@ describe('<Menu />', () => {
     expect(fullMenuElement).toHaveStyle({ opacity: 0 })
 
     //testando os MenuLinks
-    expect(screen.getByText(/Colletions/i)).toBeInTheDocument()
+    //expect(screen.getByText(/Colletions/i)).toBeInTheDocument()
     //expect(screen.getByText(/Men/i)).toBeInTheDocument()
-    expect(screen.getByText(/Women/i)).toBeInTheDocument()
-    expect(screen.getByText(/About/i)).toBeInTheDocument()
-    expect(screen.getByText(/Contact/i)).toBeInTheDocument()
+    //expect(screen.getByText(/Women/i)).toBeInTheDocument()
+    //expect(screen.getByText(/About/i)).toBeInTheDocument()
+    //expect(screen.getByText(/Contact/i)).toBeInTheDocument()
   })
 })

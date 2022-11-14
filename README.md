@@ -1,8 +1,8 @@
+This is a project to apply what I learned recently. I choose a project of front-end mentor that consists of making an [e-commerce product page] (https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6)
 
-![React Avançado](https://raw.githubusercontent.com/React-Avancado/boilerplate/master/public/img/logo-gh.svg)
-
-This is a [Next.js](https://nextjs.org/) boilerplate to be used in a course called [React Avançado](https://reactavancado.com.br/).
+This project use a boilerplate of a course called [React Avançado](https://reactavancado.com.br/).
 ![ci](https://github.com/React-Avancado/boilerplate/workflows/ci/badge.svg)
+
 ## What is inside?
 
 This project uses lot of stuff as:
