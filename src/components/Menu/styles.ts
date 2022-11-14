@@ -79,6 +79,7 @@ export const MenuToggle = styled.nav<MenuToggleProps>`
 
     bottom: 0;
     height: 100vh;
+    transition: opacity 0.3s ease-in-out;
     opacity: ${isOpen ? 1 : 0};
     pointer-events: ${isOpen ? 'all' : 'none'};
 
@@ -101,6 +102,8 @@ export const MenuToggle = styled.nav<MenuToggleProps>`
       font-weight: bold;
       font-size: 1.2rem;
       margin-bottom: 1rem;
+      transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
+      transition: transform 0.3s ease-in-out;
     }
   `}
 `
