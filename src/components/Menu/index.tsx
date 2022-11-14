@@ -26,20 +26,23 @@ const Menu = ({ username }: MenuProps) => {
         <Logo />
       </S.LogoWrapper>
 
+      <MediaMatch greaterThan="medium">
+        <S.MenuNav>
+          <S.MenuLink href="#">Colletions</S.MenuLink>
+          <S.MenuLink href="#">Men</S.MenuLink>
+          <S.MenuLink href="#">Women</S.MenuLink>
+          <S.MenuLink href="#">About</S.MenuLink>
+          <S.MenuLink href="#">Contact</S.MenuLink>
+        </S.MenuNav>
+      </MediaMatch>
+
       <S.MenuGroup>
         <S.IconWrapper>
           <ShoppingCartIcon aria-label="Open Shopping Cart" />
         </S.IconWrapper>
-        {!username ? (
-          <MediaMatch lessThan="medium">
-            <Button>Sign in</Button>
-          </MediaMatch>
-        ) : (
-          <MediaMatch lessThan="medium">
-            <Button></Button>
-          </MediaMatch>
-        )}
+        {!username ? <Button>Sign in</Button> : <Button> ... </Button>}
       </S.MenuGroup>
+
       {isOpen && <S.Sombra> </S.Sombra>}
       <S.MenuToggle aria-hidden={!isOpen} isOpen={isOpen}>
         <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
