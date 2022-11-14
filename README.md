@@ -1,4 +1,4 @@
-This is a project to apply what I recently learned. I choose a project of front-end mentor that consists of making an [e-CommerceProductPage] (https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6)
+This is a project to apply what I recently learned. I choose a project of front-end mentor that consists of making an [e-Commerce Product Page](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6)
 
 This project use a boilerplate of a course called [React Avançado](https://reactavancado.com.br/).
 ![ci](https://github.com/React-Avancado/boilerplate/workflows/ci/badge.svg)
