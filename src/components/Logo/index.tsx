@@ -1,5 +1,9 @@
 import * as S from './styles'
 
+export type LogoProps = {
+  color?: 'white' | 'black'
+}
+
 const Logo = () => (
   <S.Wrapper>
     <svg width="138" height="20" xmlns="http://www.w3.org/2000/svg">
