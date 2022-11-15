@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.article`
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background-color: hsl(223, 64%, 98%);
-  padding: 2rem;
+  padding: 2.5rem 1.5rem;
   border-radius: 1.5rem;
+  height: 3rem;
 `
 
 export const Unit = styled.div`
@@ -18,8 +19,8 @@ export const Unit = styled.div`
 
 export const PlusButton = styled.div`
   > svg {
-    height: 5rem;
-    width: 5rem;
+    height: 2rem;
+    width: 2rem;
     color: hsl(26, 100%, 55%);
     cursor: pointer;
   }
@@ -27,8 +28,8 @@ export const PlusButton = styled.div`
 
 export const SubtractButton = styled.div`
   > svg {
-    height: 5rem;
-    width: 5rem;
+    height: 2rem;
+    width: 2rem;
     color: hsl(26, 100%, 55%);
     cursor: pointer;
   }

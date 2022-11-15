@@ -24,6 +24,8 @@ const wrapperModifiers = {
 
 export const Wrapper = styled.button<WrapperProps>`
   ${({ fullWidth, hasIcon }) => css`
+    height: 4rem;
+    font-size: 1.6rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +34,7 @@ export const Wrapper = styled.button<WrapperProps>`
     border: 0;
     cursor: pointer;
     border-radius: 0.5rem;
-    padding: 0.8rem;
+    padding: 2.5rem;
     text-decoration: none;
 
     ${!!fullWidth && wrapperModifiers.fullWidth()};

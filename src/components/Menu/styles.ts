@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
+import { MenuProps } from '.'
 
 export const Wrapper = styled.menu`
   display: flex;
@@ -105,6 +106,14 @@ export const MenuToggle = styled.nav<MenuToggleProps>`
       transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
       transition: transform 0.3s ease-in-out;
     }
+  `}
+`
+
+type PhotoProps = Pick<MenuProps, 'photo'>
+
+export const Photo = styled.div<PhotoProps>`
+  ${({ photo }) => css`
+    background-color: ${photo};
   `}
 `
 

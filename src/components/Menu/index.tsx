@@ -10,9 +10,10 @@ import Logo from 'components/Logo'
 
 export type MenuProps = {
   username?: string
+  photo?: string
 }
 
-const Menu = ({ username }: MenuProps) => {
+const Menu = ({ username, photo }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <S.Wrapper>
@@ -40,7 +41,11 @@ const Menu = ({ username }: MenuProps) => {
         <S.IconWrapper>
           <ShoppingCartIcon aria-label="Open Shopping Cart" />
         </S.IconWrapper>
-        {!username ? <Button>Sign in</Button> : <Button> ... </Button>}
+        {!username ? (
+          <Button>Sign in</Button>
+        ) : (
+          <S.Photo photo={photo}></S.Photo>
+        )}
       </S.MenuGroup>
 
       {isOpen && <S.Sombra> </S.Sombra>}
