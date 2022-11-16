@@ -1,5 +1,4 @@
 import { useState } from 'react'
-
 import * as S from './styles'
 
 export type ImageBoxProps = {
@@ -28,7 +27,10 @@ const ImageBox = ({ image }: ImageBoxProps) => {
             setSelect2(false)
             setSelect3(false)
           }}
-        />
+        >
+          <S.Film></S.Film>
+        </S.Image>
+
         <S.Image
           select={select1}
           src={image[1]}

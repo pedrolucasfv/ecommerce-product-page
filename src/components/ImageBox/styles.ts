@@ -38,11 +38,16 @@ export const Image = styled.div<ImageProps>`
     margin-right: 1.2rem;
     border-radius: 1rem;
     cursor: pointer;
-
-    ${select && `border: 3px solid hsl(26, 100%, 55%); `}
+    z-index: 10;
+    ${select &&
+    `border: 3px solid hsl(26, 100%, 55%); box-shadow: inset 0 0 0 100px rgba(255,255, 255, 0.7)`}
   `}
 `
 export const ImageList = styled.div`
   display: flex;
   justify-content: space-between;
+`
+export const Film = styled.div`
+  background: rgba(0, 0, 0, 1);
+  z-index: 50;
 `

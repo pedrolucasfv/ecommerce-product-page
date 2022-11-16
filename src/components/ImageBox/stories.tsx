@@ -6,10 +6,10 @@ export default {
   component: ImageBox,
   args: {
     image: [
-      'https://source.unsplash.com/user/willianjusten/1042x580',
-      'https://source.unsplash.com/user/willianjusten/1042x581',
-      'https://source.unsplash.com/user/willianjusten/1042x582',
-      'https://source.unsplash.com/user/willianjusten/1042x583'
+      '/img/image-product-1.jpg',
+      '/img/image-product-2.jpg',
+      '/img/image-product-3.jpg',
+      '/img/image-product-4.jpg'
     ]
   }
 } as Meta
