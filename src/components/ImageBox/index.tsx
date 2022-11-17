@@ -2,12 +2,12 @@ import { useState } from 'react'
 import * as S from './styles'
 
 export type ImageBoxProps = {
-  image: string[]
+  images: string[]
 }
 
 //LEMBRAR DE ARRUMAR ESSA GAMBIARRA PARA SELECIONAR UMA IMAGEM
 
-const ImageBox = ({ image }: ImageBoxProps) => {
+const ImageBox = ({ images }: ImageBoxProps) => {
   const [select0, setSelect0] = useState(true)
   const [select1, setSelect1] = useState(false)
   const [select2, setSelect2] = useState(false)
@@ -15,11 +15,11 @@ const ImageBox = ({ image }: ImageBoxProps) => {
   const [img, setImg] = useState(0)
   return (
     <S.Wrapper>
-      <S.MainImage src={image[img]} />
+      <S.MainImage src={images[img]} role="img" aria-label="mainImage" />
       <S.ImageList>
         <S.Image
           select={select0}
-          src={image[0]}
+          src={images[0]}
           onClick={() => {
             setImg(0)
             setSelect0(true)
@@ -33,7 +33,7 @@ const ImageBox = ({ image }: ImageBoxProps) => {
 
         <S.Image
           select={select1}
-          src={image[1]}
+          src={images[1]}
           onClick={() => {
             setImg(1)
             setSelect0(false)
@@ -44,7 +44,7 @@ const ImageBox = ({ image }: ImageBoxProps) => {
         />
         <S.Image
           select={select2}
-          src={image[2]}
+          src={images[2]}
           onClick={() => {
             setImg(2)
             setSelect0(false)
@@ -55,7 +55,7 @@ const ImageBox = ({ image }: ImageBoxProps) => {
         />
         <S.Image
           select={select3}
-          src={image[3]}
+          src={images[3]}
           onClick={() => {
             setImg(3)
             setSelect0(false)

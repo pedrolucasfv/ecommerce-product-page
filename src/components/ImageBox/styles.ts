@@ -11,8 +11,8 @@ type MainImageProps = {
 }
 export const MainImage = styled.div<MainImageProps>`
   ${({ src }) => css`
-    height: 35rem;
-    width: 43rem;
+    height: 53rem;
+    width: 58.5rem;
     background-size: 80rem 14.8rem;
     background-image: url(${src});
     background-position: center;
@@ -28,14 +28,14 @@ type ImageProps = {
 
 export const Image = styled.div<ImageProps>`
   ${({ src, select }) => css`
-    height: 10rem;
-    width: 10rem;
+    height: 12rem;
+    width: 12rem;
     background-size: 80rem 14.8rem;
 
     background-image: url(${src});
     background-position: center;
     background-size: cover;
-    margin-right: 1.2rem;
+    margin-right: 3.5rem;
     border-radius: 1rem;
     cursor: pointer;
     z-index: 10;

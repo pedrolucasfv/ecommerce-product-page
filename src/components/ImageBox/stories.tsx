@@ -1,16 +1,12 @@
 import { Story, Meta } from '@storybook/react'
 import ImageBox, { ImageBoxProps } from '.'
+import images from './mock'
 
 export default {
   title: 'ImageBox',
   component: ImageBox,
   args: {
-    image: [
-      '/img/image-product-1.jpg',
-      '/img/image-product-2.jpg',
-      '/img/image-product-3.jpg',
-      '/img/image-product-4.jpg'
-    ]
+    ...images
   }
 } as Meta
 
