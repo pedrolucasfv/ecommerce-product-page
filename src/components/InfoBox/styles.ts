@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.article`
   width: 100%%;
@@ -17,16 +18,28 @@ export const Title = styled.h3`
   text-transform: uppercase;
   margin-bottom: 0.8rem;
   font-size: 2rem;
+  ${media.lessThan('medium')`
+
+     font-size: 1.2rem;
+ `}
 `
 export const Subtitle = styled.h1`
   margin-bottom: 3rem;
   font-size: 4.5rem;
+  ${media.lessThan('medium')`
+     padding-right: 1rem;
+     font-size: 2.5rem;
+ `}
 `
 export const Description = styled.text`
   margin-bottom: 3rem;
   color: gray;
   font-size: 2rem;
   line-height: 1.7;
+  ${media.lessThan('medium')`
+     font-size: 1.4rem;
+     font-weight: 500;
+ `}
 `
 const PriceModifiers = {
   default: () => css`
@@ -38,6 +51,7 @@ const PriceModifiers = {
     text-decoration: line-through;
     font-size: 2rem;
     color: hsl(220, 14%, 75%);
+    margin-bottom: 1rem;
   `
 }
 
@@ -51,6 +65,10 @@ export const BuyBox = styled.div`
   height: 3rem;
   display: flex;
   justify-content: space-between;
+
+  ${media.lessThan('medium')`
+    flex-direction: column;
+ `}
 `
 type PriceProps = {
   isPromotional?: boolean
@@ -58,6 +76,12 @@ type PriceProps = {
 
 export const PriceBox = styled.div`
   margin-bottom: 4rem;
+  ${media.lessThan('medium')`
+    display: flex;    
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+ `}
 `
 
 export const Promotion = styled.div`
@@ -69,6 +93,9 @@ export const Promotion = styled.div`
   margin-left: 2rem;
   border-radius: 0.5rem;
   margin-top: 0.8rem;
+  ${media.lessThan('medium')`
+  margin-left: 1rem;
+ `}
 `
 
 export const ContentPrice = styled.div`
