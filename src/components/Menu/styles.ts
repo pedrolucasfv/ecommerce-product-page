@@ -97,7 +97,7 @@ export const MenuToggle = styled.nav<MenuToggleProps>`
     justify-content: space-between;
     position: fixed;
     z-index: 20;
-    width: 60%;
+    width: 42%;
     left: 0;
     top: 0;
 

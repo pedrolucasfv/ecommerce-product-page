@@ -5,7 +5,7 @@ type ImageProps = {
 }
 export const Image = styled.div<ImageProps>`
   ${({ src }) => css`
-    height: 20rem;
+    height: 32rem;
     width: 100%;
     background-size: 80rem 14.8rem;
     background-image: url(${src});
