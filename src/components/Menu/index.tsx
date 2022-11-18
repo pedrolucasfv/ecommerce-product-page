@@ -7,18 +7,21 @@ import MediaMatch from 'components/MediaMatch'
 import Button from 'components/Button'
 import * as S from './styles'
 import Logo from 'components/Logo'
+import Cart, { CartProps } from 'components/Cart'
 
 export type MenuProps = {
   username?: string
   photo?: string
+  cart?: CartProps
 }
 
-const Menu = ({ username, photo }: MenuProps) => {
-  const [isOpen, setIsOpen] = useState(false)
+const Menu = ({ username, photo, cart }: MenuProps) => {
+  const [isOpenMenu, setIsOpenMenu] = useState(false)
+  const [isOpenCart, setIsOpenCart] = useState(false)
   return (
     <S.Wrapper>
       <MediaMatch lessThan="medium">
-        <S.IconWrapper onClick={() => setIsOpen(true)}>
+        <S.IconWrapper onClick={() => setIsOpenMenu(true)}>
           <MenuIcon aria-label="Open Menu" />
         </S.IconWrapper>
       </MediaMatch>
@@ -38,9 +41,13 @@ const Menu = ({ username, photo }: MenuProps) => {
       </MediaMatch>
 
       <S.MenuGroup>
-        <S.IconWrapper>
+        <S.IconCart
+          onClick={() => {
+            !isOpenCart ? setIsOpenCart(true) : setIsOpenCart(false)
+          }}
+        >
           <ShoppingCartIcon aria-label="Open Shopping Cart" />
-        </S.IconWrapper>
+        </S.IconCart>
         {!username ? (
           <Button>Sign in</Button>
         ) : (
@@ -48,9 +55,12 @@ const Menu = ({ username, photo }: MenuProps) => {
         )}
       </S.MenuGroup>
 
-      {isOpen && <S.Sombra> </S.Sombra>}
-      <S.MenuToggle aria-hidden={!isOpen} isOpen={isOpen}>
-        <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
+      {isOpenMenu && <S.Sombra> </S.Sombra>}
+      <S.MenuToggle aria-hidden={!isOpenMenu} isOpenMenu={isOpenMenu}>
+        <CloseIcon
+          aria-label="Close Menu"
+          onClick={() => setIsOpenMenu(false)}
+        />
         <S.MenuNav>
           <S.MenuLink href="#">Colletions</S.MenuLink>
           <S.MenuLink href="#">Men</S.MenuLink>
@@ -59,6 +69,12 @@ const Menu = ({ username, photo }: MenuProps) => {
           <S.MenuLink href="#">Contact</S.MenuLink>
         </S.MenuNav>
       </S.MenuToggle>
+
+      {isOpenCart && (
+        <S.Cart>
+          <Cart {...cart} />
+        </S.Cart>
+      )}
     </S.Wrapper>
   )
 }

@@ -40,11 +40,9 @@ export const MenuGroup = styled.div`
   > div {
     margin: 0 2.2rem;
   }
-  svg {
-    color: gray;
-  }
   ${media.greaterThan('medium')`
-    margin: 2rem;
+    padding: 5rem;
+    margin-right: 2rem;
     > button { 
     padding: 1rem 2rem;
   }
@@ -86,11 +84,21 @@ export const MenuLink = styled.a`
     }
   }
 `
+export const IconCart = styled.div`
+  cursor: pointer;
+  width: 2.4rem;
+  height: 2.4rem;
+  color: gray;
+  :hover {
+    color: hsl(26, 100%, 55%);
+  }
+`
+
 type MenuToggleProps = {
-  isOpen: boolean
+  isOpenMenu: boolean
 }
 export const MenuToggle = styled.nav<MenuToggleProps>`
-  ${({ isOpen }) => css`
+  ${({ isOpenMenu }) => css`
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -104,8 +112,8 @@ export const MenuToggle = styled.nav<MenuToggleProps>`
     bottom: 0;
     height: 100vh;
     transition: opacity 0.3s ease-in-out;
-    opacity: ${isOpen ? 1 : 0};
-    pointer-events: ${isOpen ? 'all' : 'none'};
+    opacity: ${isOpenMenu ? 1 : 0};
+    pointer-events: ${isOpenMenu ? 'all' : 'none'};
 
     > svg {
       margin: 1.5rem;
@@ -126,7 +134,7 @@ export const MenuToggle = styled.nav<MenuToggleProps>`
       font-weight: bold;
       font-size: 1.2rem;
       margin-bottom: 1rem;
-      transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
+      transform: ${isOpenMenu ? 'translateY(0)' : 'translateY(3rem)'};
       transition: transform 0.3s ease-in-out;
     }
   `}
@@ -148,4 +156,13 @@ export const Sombra = styled.div`
   top: 0;
   background: rgba(0, 0, 0, 0.4);
   z-index: 10;
+`
+
+export const Cart = styled.div`
+  position: fixed;
+  right: 0%;
+  top: 10rem;
+  -webkit-box-shadow: 0px 0px 28px -1px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 0px 28px -1px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 28px -1px rgba(0, 0, 0, 0.6);
 `
