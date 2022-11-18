@@ -36,16 +36,18 @@ export const MenuGroup = styled.div`
   flex-grow: 1;
   justify-content: flex-end;
   align-items: center;
-  //padding: 3rem;
   > div {
-    margin: 0 2.2rem;
+    margin: 0 1.5rem;
+    ${media.lessThan('medium')`
+    margin: 0 0.5rem
+    `}
   }
   ${media.greaterThan('medium')`
     padding: 5rem;
     margin-right: 2rem;
     > button { 
     padding: 1rem 2rem;
-  }
+   }
   `}
 `
 
@@ -144,7 +146,12 @@ type PhotoProps = Pick<MenuProps, 'photo'>
 
 export const Photo = styled.div<PhotoProps>`
   ${({ photo }) => css`
-    background-color: ${photo};
+    background: url(${photo});
+    height: 5rem;
+    width: 5rem;
+    border-radius: 1rem;
+    background-position: center;
+    background-size: cover;
   `}
 `
 
@@ -159,7 +166,8 @@ export const Sombra = styled.div`
 `
 
 export const Cart = styled.div`
-  position: fixed;
+  z-index: 100;
+  position: absolute;
   right: 0%;
   top: 10rem;
   -webkit-box-shadow: 0px 0px 28px -1px rgba(0, 0, 0, 0.6);

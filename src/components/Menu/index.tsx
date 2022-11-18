@@ -48,11 +48,7 @@ const Menu = ({ username, photo, cart }: MenuProps) => {
         >
           <ShoppingCartIcon aria-label="Open Shopping Cart" />
         </S.IconCart>
-        {!username ? (
-          <Button>Sign in</Button>
-        ) : (
-          <S.Photo photo={photo}></S.Photo>
-        )}
+        {!username ? <Button>Sign in</Button> : <S.Photo photo={photo} />}
       </S.MenuGroup>
 
       {isOpenMenu && <S.Sombra> </S.Sombra>}

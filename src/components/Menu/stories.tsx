@@ -5,6 +5,7 @@ export default {
   title: 'Menu',
   component: Menu,
   args: {
+    photo: '/img/image-avatar.png',
     cart: {
       image: '/img/image-product-1.jpg',
       title: 'Fall Limited Edition Sneakers',

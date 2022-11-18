@@ -1,14 +1,11 @@
 import { Story, Meta } from '@storybook/react'
 import Cart, { CartProps } from '.'
-
+import item from './mock'
 export default {
   title: 'Cart',
   component: Cart,
   args: {
-    image: '/img/image-product-1.jpg',
-    title: 'Fall Limited Edition Sneakers',
-    price: 125,
-    unit: 3
+    ...item
   }
 } as Meta
 
