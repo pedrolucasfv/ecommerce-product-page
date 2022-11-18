@@ -40,6 +40,9 @@ export const MenuGroup = styled.div`
   > div {
     margin: 0 2.2rem;
   }
+  svg {
+    color: gray;
+  }
   ${media.greaterThan('medium')`
     margin: 2rem;
     > button { 
@@ -62,6 +65,26 @@ export const MenuLink = styled.a`
   text-decoration: none;
   text-align: center;
   font-weight: bold;
+  &:hover {
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 3.5rem;
+      border-bottom: 0.5rem solid hsl(26, 100%, 55%);
+      animation: hoverAnimation 0.2s forwards;
+    }
+    @keyframes hoverAnimation {
+      from {
+        width: 0;
+        left: 50%;
+      }
+      to {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
 `
 type MenuToggleProps = {
   isOpen: boolean
