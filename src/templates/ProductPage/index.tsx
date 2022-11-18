@@ -1,21 +1,20 @@
 import ImageBox, { ImageBoxProps } from 'components/ImageBox'
 import InfoBox, { InfoBoxProps } from 'components/InfoBox'
 import ImageSlider from 'components/ImageSlider'
-import Menu from 'components/Menu'
+import Menu, { MenuProps } from 'components/Menu'
 import * as S from './styles'
 import MediaMatch from 'components/MediaMatch'
-import { CartProps } from 'components/Cart'
 
 export type ProductPageTemplateProps = {
   imageBox: ImageBoxProps
   infoBox: InfoBoxProps
-  cart: CartProps
+  menu: MenuProps
 }
 
-const ProductPage = ({ imageBox, infoBox, cart }: ProductPageTemplateProps) => (
+const ProductPage = ({ imageBox, infoBox, menu }: ProductPageTemplateProps) => (
   <S.Wrapper>
     <MediaMatch greaterThan="medium">
-      <Menu cart={cart} />
+      <Menu cart={menu.cart} photo={menu.photo} username={menu.username} />
       <S.Container>
         <S.ImageBox>
           <ImageBox {...imageBox} />
@@ -27,7 +26,7 @@ const ProductPage = ({ imageBox, infoBox, cart }: ProductPageTemplateProps) => (
     </MediaMatch>
 
     <MediaMatch lessThan="medium">
-      <Menu cart={cart} />
+      <Menu cart={menu.cart} />
       <ImageSlider {...imageBox} />
       <InfoBox {...infoBox} />
     </MediaMatch>

@@ -1,7 +1,7 @@
 import ProductPage, { ProductPageTemplateProps } from '../templates/ProductPage'
 import imagesMock from 'components/ImageBox/mock'
 import infoMock from 'components/InfoBox/mock'
-import cartMock from 'components/Cart/mock'
+import menuMock from 'components/Menu/mock'
 
 export default function Home(props: ProductPageTemplateProps) {
   return <ProductPage {...props} />
@@ -12,7 +12,7 @@ export function getServerSideProps() {
     props: {
       imageBox: imagesMock,
       infoBox: infoMock,
-      cart: cartMock
+      menu: menuMock
     }
   }
 }
