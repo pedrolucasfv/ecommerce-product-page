@@ -34,7 +34,7 @@ export const Wrapper = styled.button<WrapperProps>`
     border: 0;
     cursor: pointer;
     border-radius: 0.5rem;
-    padding: 2.5rem;
+    padding: 1.7rem;
     text-decoration: none;
 
     ${!!fullWidth && wrapperModifiers.fullWidth()};
