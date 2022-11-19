@@ -1,9 +1,12 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  height: 100%;
+  width: 100%;
 `
 
 type MainImageProps = {
@@ -13,7 +16,10 @@ export const MainImage = styled.div<MainImageProps>`
   ${({ src }) => css`
     height: 53rem;
     width: 58.5rem;
-    background-size: 80rem 14.8rem;
+    ${media.lessThan('huge')`
+    height: 30rem;
+    width: 33rem;
+  `}
     background-image: url(${src});
     background-position: center;
     background-size: cover;
@@ -39,6 +45,11 @@ export const Image = styled.div<ImageProps>`
     border-radius: 1rem;
     cursor: pointer;
     z-index: 10;
+    ${media.lessThan('huge')`
+    height: 7rem;
+    width: 7rem;
+    margin-right: 1.8rem;
+  `}
     ${select &&
     `border: 3px solid hsl(26, 100%, 55%); box-shadow: inset 0 0 0 100px rgba(255,255, 255, 0.7)`}
   `}

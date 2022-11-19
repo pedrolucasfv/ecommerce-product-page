@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 import { ButtonProps } from '.'
 
 type WrapperProps = {
@@ -36,6 +37,9 @@ export const Wrapper = styled.button<WrapperProps>`
     border-radius: 0.5rem;
     padding: 1.7rem;
     text-decoration: none;
+    ${media.greaterThan('medium')`
+    height: 5rem;
+  `}
 
     ${!!fullWidth && wrapperModifiers.fullWidth()};
     ${!!hasIcon && wrapperModifiers.withIcon()};

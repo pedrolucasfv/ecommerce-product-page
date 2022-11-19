@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.main``
+export const Wrapper = styled.main`
+  background-color: white;
+`
 
 export const Content = styled.div`
   border-bottom: 0.2rem solid lightgray;
@@ -23,7 +25,7 @@ export const Product = styled.div`
 `
 
 type ImageProps = {
-  src: string
+  src?: string
 }
 export const Image = styled.div<ImageProps>`
   ${({ src }) => css`
@@ -62,11 +64,22 @@ export const Price = styled.div`
 `
 
 export const Icon = styled.div`
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
+  margin-left: 3rem;
   cursor: pointer;
   color: lightgray;
   :hover {
     color: hsl(26, 100%, 62%);
   }
+`
+
+export const EmptyMessage = styled.h2`
+  font-size: 2.2rem;
+  color: gray;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50rem;
 `

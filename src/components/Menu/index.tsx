@@ -12,7 +12,7 @@ import Cart, { CartProps } from 'components/Cart'
 export type MenuProps = {
   username?: string
   photo?: string
-  cart?: CartProps
+  cart: CartProps
 }
 
 const Menu = ({ username, photo, cart }: MenuProps) => {

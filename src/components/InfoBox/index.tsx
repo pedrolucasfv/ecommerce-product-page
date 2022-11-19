@@ -2,6 +2,7 @@ import Button from 'components/Button'
 import * as S from './styles'
 import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart'
 import UnitSelector from 'components/UnitSelector'
+import { useState } from 'react'
 
 export type InfoBoxProps = {
   title: string
@@ -10,6 +11,7 @@ export type InfoBoxProps = {
   price: string
   promotion?: string
   promotionalPrice?: string
+  isOnCart?: boolean
 }
 
 const InfoBox = ({
@@ -19,29 +21,34 @@ const InfoBox = ({
   price,
   promotion,
   promotionalPrice
-}: InfoBoxProps) => (
-  <S.Wrapper>
-    <S.Info>
-      <S.Title>{title}</S.Title>
-      <S.Subtitle>{subtitle}</S.Subtitle>
-      <S.Description>{description}</S.Description>
-    </S.Info>
+}: InfoBoxProps) => {
+  const [onCart, setIsOnCart] = useState(false)
 
-    <S.PriceBox>
-      <S.ContentPrice>
-        <S.Price>{promotionalPrice || price}</S.Price>
-        <S.Promotion>{promotion}</S.Promotion>
-      </S.ContentPrice>
-      {!!promotionalPrice && <S.Price isPromotional>{price}</S.Price>}
-    </S.PriceBox>
-
-    <S.BuyBox>
-      <UnitSelector />
-      <Button fullWidth icon={<AddShoppingCart />}>
-        Add to cart
-      </Button>
-    </S.BuyBox>
-  </S.Wrapper>
-)
-
+  return (
+    <S.Wrapper>
+      <S.Info>
+        <S.Title>{title}</S.Title>
+        <S.Subtitle>{subtitle}</S.Subtitle>
+        <S.Description>{description}</S.Description>
+      </S.Info>
+      <S.PriceBox>
+        <S.ContentPrice>
+          <S.Price>{promotionalPrice || price}</S.Price>
+          <S.Promotion>{promotion}</S.Promotion>
+        </S.ContentPrice>
+        {!!promotionalPrice && <S.Price isPromotional>{price}</S.Price>}
+      </S.PriceBox>
+      <S.BuyBox>
+        <S.UnitSelector>
+          <UnitSelector />
+        </S.UnitSelector>
+        <S.Button onClick={() => setIsOnCart(!onCart)}>
+          <Button fullWidth icon={<AddShoppingCart />}>
+            Add to cart
+          </Button>
+        </S.Button>
+      </S.BuyBox>
+    </S.Wrapper>
+  )
+}
 export default InfoBox

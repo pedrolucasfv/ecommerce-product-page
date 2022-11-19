@@ -102,3 +102,14 @@ export const ContentPrice = styled.div`
   display: flex;
   align-items: flex-start;
 `
+
+export const Button = styled.div`
+  flex-grow: 2;
+  ${media.greaterThan('medium')`
+  margin-left: 3rem;
+ `}
+`
+export const UnitSelector = styled.div`
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+`

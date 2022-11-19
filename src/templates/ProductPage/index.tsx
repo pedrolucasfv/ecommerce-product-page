@@ -26,7 +26,7 @@ const ProductPage = ({ imageBox, infoBox, menu }: ProductPageTemplateProps) => (
     </MediaMatch>
 
     <MediaMatch lessThan="medium">
-      <Menu cart={menu.cart} />
+      <Menu cart={menu.cart} photo={menu.photo} username={menu.username} />
       <ImageSlider {...imageBox} />
       <InfoBox {...infoBox} />
     </MediaMatch>
