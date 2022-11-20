@@ -8,11 +8,11 @@ This project uses a boilerplate from a course called React [React Avançado](htt
 ## Screenshots
 
 <p>
-    <img width="469" height="300"> src="/public/screenshots/desktop-page.png">
+    <img width="469" height="300" src="/public/screenshots/desktop-page.png">
 </p>
 
 <p>
-    <img width="469" height="300"> src="/public/screenshots/mobile-page.png">
+    <img width="469" height="300" src="/public/screenshots/mobile-page.png">
 </p>
 
 ## What is inside?
