@@ -1,7 +1,19 @@
-This is a project to apply what I recently learned. I chose a project of front-end mentor that consists of making an [e-Commerce Product Page](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6)
+## Project
 
-This project use a boilerplate of a course called [React Avançado](https://reactavancado.com.br/).
+This is a project to apply what I have recently learned. I chose a front-end mentor project, which consists of creating an [e-Commerce Product Page](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6)
+
+This project uses a boilerplate from a course called React [React Avançado](https://reactavancado.com.br/).
 ![ci](https://github.com/React-Avancado/boilerplate/workflows/ci/badge.svg)
+
+## Screenshots
+
+<p>
+    <img width="469" height="300"> src="/public/screenshots/desktop-page.png">
+</p>
+
+<p>
+    <img width="469" height="300"> src="/public/screenshots/mobile-page.png">
+</p>
 
 ## What is inside?
 
