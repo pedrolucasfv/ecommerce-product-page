@@ -24,13 +24,13 @@ This project uses lot of stuff as:
 #### Desktop
 
 <p>
-    <img width= "468px" height="241" src="/public/screenshots/desktop-page.png">
+    <img width= "702px" height="361px" src="/public/screenshots/desktop-page.png">
 </p>
 
 #### Mobile
 
 <p align="center">
-    <img width= "215px" height="408" src="/public/screenshots/mobile-page.png">
+    <img width= "215px" height="408px" src="/public/screenshots/mobile-page.png">
 </p>
 
 ## Getting Started
