@@ -7,12 +7,16 @@ This project uses a boilerplate from a course called React [React Avançado](htt
 
 ## Screenshots
 
-<p>
-    <img width="469" height="300" src="/public/screenshots/desktop-page.png">
-</p>
+##### Desktop
 
 <p>
-    <img width="469" height="300" src="/public/screenshots/mobile-page.png">
+    <img src="/public/screenshots/desktop-page.png">
+</p>
+
+##### Mobile
+
+<p>
+    <img src="/public/screenshots/mobile-page.png">
 </p>
 
 ## What is inside?
