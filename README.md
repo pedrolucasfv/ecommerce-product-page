@@ -21,13 +21,13 @@ This project uses lot of stuff as:
 
 ## Screenshots
 
-#### Desktop
+### Desktop:
 
-<p>
+<p align="center">
     <img width= "702px" height="361px" src="/public/screenshots/desktop-page.png">
 </p>
 
-#### Mobile
+### Mobile:
 
 <p align="center">
     <img width= "215px" height="408px" src="/public/screenshots/mobile-page.png">
