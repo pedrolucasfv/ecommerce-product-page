@@ -5,20 +5,6 @@ This is a project to apply what I have recently learned. I chose a front-end men
 This project uses a boilerplate from a course called React [React Avançado](https://reactavancado.com.br/).
 ![ci](https://github.com/React-Avancado/boilerplate/workflows/ci/badge.svg)
 
-## Screenshots
-
-##### Desktop
-
-<p>
-    <img src="/public/screenshots/desktop-page.png">
-</p>
-
-##### Mobile
-
-<p>
-    <img src="/public/screenshots/mobile-page.png">
-</p>
-
 ## What is inside?
 
 This project uses lot of stuff as:
@@ -32,6 +18,20 @@ This project uses lot of stuff as:
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky)
+
+## Screenshots
+
+#### Desktop
+
+<p>
+    <img width= "936px" height="482" src="/public/screenshots/desktop-page.png">
+</p>
+
+#### Mobile
+
+<p align="center">
+    <img width= "215px" height="408" src="/public/screenshots/mobile-page.png">
+</p>
 
 ## Getting Started
 
