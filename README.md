@@ -24,7 +24,7 @@ This project uses lot of stuff as:
 #### Desktop
 
 <p>
-    <img width= "936px" height="482" src="/public/screenshots/desktop-page.png">
+    <img width= "468px" height="241" src="/public/screenshots/desktop-page.png">
 </p>
 
 #### Mobile
