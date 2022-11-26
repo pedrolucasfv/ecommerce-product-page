@@ -5,6 +5,9 @@ This is a project to apply what I have recently learned. I chose a front-end men
 This project uses a boilerplate from a course called React [React Avançado](https://reactavancado.com.br/).
 ![ci](https://github.com/React-Avancado/boilerplate/workflows/ci/badge.svg)
 
+[you can see the deploy here](https://ecommerce-product-page-vdsz.vercel.app/)
+
+
 ## What is inside?
 
 This project uses lot of stuff as:
