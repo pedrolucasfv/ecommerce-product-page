@@ -10,8 +10,8 @@ const settings: SliderSettings = {
   vertical: false,
   verticalSwiping: false,
   infinite: false,
-  nextArrow: <ArrowRight aria-label="next games" />,
-  prevArrow: <ArrowLeft aria-label="previous games" />
+  nextArrow: <ArrowRight aria-label="next image" />,
+  prevArrow: <ArrowLeft aria-label="previous image" />
 }
 
 export type ImageSliderProps = {

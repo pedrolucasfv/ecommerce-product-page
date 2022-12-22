@@ -1,9 +1,16 @@
 import { Story, Meta } from '@storybook/react'
-import UnitSelector from '.'
+import UnitSelector, { UnitSelectorProps } from '.'
 
 export default {
   title: 'UnitSelector',
-  component: UnitSelector
+  component: UnitSelector,
+  args: {
+    unitFunc: (unit: number) => {
+      console.log(unit)
+    }
+  }
 } as Meta
 
-export const Default: Story = (args) => <UnitSelector {...args} />
+export const Default: Story<UnitSelectorProps> = (args) => (
+  <UnitSelector {...args} />
+)

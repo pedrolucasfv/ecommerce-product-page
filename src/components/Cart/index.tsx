@@ -1,22 +1,21 @@
 import Button from 'components/Button'
 import * as S from './styles'
 import { Trash as TrashIcon } from '@styled-icons/heroicons-solid/Trash'
-import { useState } from 'react'
 export type CartProps = {
   title?: string
   image?: string
   price?: number
   unit?: number
+  removeCart: () => void
 }
 
-const Cart = ({ image, title, price, unit }: CartProps) => {
-  const [state, setIsRemoveItem] = useState(title)
+const Cart = ({ image, title, price, unit, removeCart }: CartProps) => {
   return (
     <S.Wrapper>
       <S.Content>
         <S.Title>Cart</S.Title>
       </S.Content>
-      {state ? (
+      {title ? (
         <S.BoxProduct>
           <S.Product>
             <S.Image src={image}></S.Image>
@@ -28,7 +27,7 @@ const Cart = ({ image, title, price, unit }: CartProps) => {
                 </S.Price>
               )}
             </S.InfoProduct>
-            <S.Icon onClick={() => setIsRemoveItem(undefined)}>
+            <S.Icon onClick={() => removeCart()}>
               <TrashIcon />
             </S.Icon>
           </S.Product>

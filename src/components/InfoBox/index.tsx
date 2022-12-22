@@ -11,7 +11,7 @@ export type InfoBoxProps = {
   price: string
   promotion?: string
   promotionalPrice?: string
-  isOnCart?: boolean
+  addCart: (unit: number) => void
 }
 
 const InfoBox = ({
@@ -20,9 +20,14 @@ const InfoBox = ({
   subtitle,
   price,
   promotion,
-  promotionalPrice
+  promotionalPrice,
+  addCart
 }: InfoBoxProps) => {
-  const [onCart, setIsOnCart] = useState(false)
+  const [unit, setUnit] = useState(0)
+
+  const unitFunc = (unit: number) => {
+    setUnit(unit)
+  }
 
   return (
     <S.Wrapper>
@@ -40,9 +45,9 @@ const InfoBox = ({
       </S.PriceBox>
       <S.BuyBox>
         <S.UnitSelector>
-          <UnitSelector />
+          <UnitSelector unitFunc={unitFunc} />
         </S.UnitSelector>
-        <S.Button onClick={() => setIsOnCart(!onCart)}>
+        <S.Button onClick={() => addCart(unit)}>
           <Button fullWidth icon={<AddShoppingCart />}>
             Add to cart
           </Button>

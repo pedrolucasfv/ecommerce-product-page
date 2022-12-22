@@ -12,10 +12,11 @@ import Cart, { CartProps } from 'components/Cart'
 export type MenuProps = {
   username?: string
   photo?: string
-  cart: CartProps
+  cart?: CartProps
+  removeCart: () => void
 }
 
-const Menu = ({ username, photo, cart }: MenuProps) => {
+const Menu = ({ username, photo, cart, removeCart }: MenuProps) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
   const [isOpenCart, setIsOpenCart] = useState(false)
   return (
@@ -68,7 +69,7 @@ const Menu = ({ username, photo, cart }: MenuProps) => {
 
       {isOpenCart && (
         <S.Cart>
-          <Cart {...cart} />
+          <Cart {...cart} removeCart={removeCart} />
         </S.Cart>
       )}
     </S.Wrapper>
