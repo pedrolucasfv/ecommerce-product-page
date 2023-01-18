@@ -13,7 +13,7 @@ export type MenuProps = {
   username?: string
   photo?: string
   cart?: CartProps
-  removeCart: () => void
+  removeCart?: () => void
 }
 
 const Menu = ({ username, photo, cart, removeCart }: MenuProps) => {
